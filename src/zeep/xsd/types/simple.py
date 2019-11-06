@@ -73,9 +73,7 @@ class AnySimpleType(AnyType):
             return None
 
     def pythonvalue(self, xmlvalue):
-        raise NotImplementedError(
-            "%s.pytonvalue() not implemented" % self.__class__.__name__
-        )
+        return xmlvalue
 
     def render(self, parent, value, xsd_type=None, render_path=None):
         if value is Nil:
